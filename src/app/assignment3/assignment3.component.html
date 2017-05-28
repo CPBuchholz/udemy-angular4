@@ -1,0 +1,15 @@
+<button
+  class="btn btn-danger"
+  (click)="toggleDetailsDisplay()">
+  Display Details
+</button>
+<p *ngIf="showSecret">
+  Secret Password = SDS
+</p>
+<br />
+<p>Click Count : {{ clicks.length }}</p>
+<ul>
+  <li *ngFor="let clk of clicks; let i = index"
+    [ngStyle]="{'background-color': i >= 4 ? 'blue' : 'white'}"
+    [ngClass]="{'white': i >= 4}">{{ clk }}</li>
+</ul>
